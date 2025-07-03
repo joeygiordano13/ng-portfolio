@@ -129,16 +129,10 @@ export default function PortfolioSite() {
                     width={256}
                     height={256}
                     className="w-full h-full object-cover rounded-full"
-                    onError={(e) => {
-                      // Fallback to placeholder if image doesn't exist
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
+                    onError={() => {
+                      // Next.js Image component handles errors automatically
                     }}
                   />
-                  {/* Fallback gradient background with icon */}
-                  <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center" style={{display: 'none'}}>
-                    <User size={120} className="text-white" />
-                  </div>
                 </div>
                 {/* Decorative ring */}
                 <div className="absolute -inset-2 rounded-full border-2 border-blue-400/30 animate-pulse"></div>
