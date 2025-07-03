@@ -21,21 +21,18 @@ export default function PortfolioSite() {
       description: "Led creative direction and production for a multi-million dollar brand awareness campaign. Increased brand recognition by 40% and drove $2.3M in direct sales.",
       tech: ["Creative Direction", "Video Production", "Social Media", "Analytics"],
       link: "#",
-      github: "#"
     },
     {
       title: "Award-Winning Commercial Series",
       description: "Produced and starred in a series of commercials that won regional advertising awards. Managed talent, coordinated shoots, and ensured brand messaging alignment.",
       tech: ["Acting", "Production Management", "Brand Strategy", "Talent Coordination"],
       link: "#",
-      github: "#"
     },
     {
       title: "Sales Training Program",
       description: "Developed and implemented a comprehensive sales training program that increased team performance by 35% and reduced onboarding time by 50%.",
       tech: ["Sales Strategy", "Training Development", "Performance Analytics", "Team Leadership"],
       link: "#",
-      github: "#"
     }
   ];
 
@@ -225,7 +222,7 @@ export default function PortfolioSite() {
                       View Work
                     </a>
                     <a 
-                      href={project.github}
+                      href={project.link}
                       className="flex items-center gap-1 text-gray-400 hover:text-gray-300 transition-colors"
                     >
                       <Briefcase size={16} />
