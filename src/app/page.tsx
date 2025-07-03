@@ -320,7 +320,7 @@ export default function PortfolioSite() {
                 <h4 className="text-lg font-semibold text-white">Connect with me</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <a 
-                    href="https://instagram.com/nicholas.giordano"
+                    href="https://instagram.com/nicholas.giordano" target="_blank" rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-600 py-3 px-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
                   >
                     <Instagram size={20} className="text-gray-300" />
