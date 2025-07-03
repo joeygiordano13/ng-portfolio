@@ -11,7 +11,12 @@ export default function PortfolioSite() {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 60;
+      const elementPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -70,7 +75,7 @@ export default function PortfolioSite() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
+      <section id="home" className="pt-28 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="lg:w-1/2 mb-8 lg:mb-0">
@@ -124,7 +129,7 @@ export default function PortfolioSite() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700">
               <p className="text-lg text-gray-300 mb-6">
-                With over 8 years of experience spanning creative production, sales, and entertainment, I specialize in 
+                With over 30 years of experience spanning creative production, sales, and entertainment, I specialize in 
                 developing compelling brand narratives and driving revenue growth. My unique combination 
                 of creative vision and business acumen allows me to bridge the gap between artistic 
                 excellence and commercial success.
