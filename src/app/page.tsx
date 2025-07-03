@@ -109,7 +109,7 @@ export default function PortfolioSite() {
                   View My Portfolio
                 </button>
                 <a 
-                  href="/resume.pdf" 
+                  href="/nicholas-giordano-sales-executive.pdf" 
                   className="border-2 border-blue-500 text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:-translate-y-0.5"
                 >
                   <Download size={20} />
