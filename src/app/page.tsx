@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Calendar, Briefcase, BookOpen, Instagram } from 'lucide-react';
+import { Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Briefcase, Instagram, Film } from 'lucide-react';
 
 export default function PortfolioSite() {
   const [activeSection, setActiveSection] = useState('home');
@@ -20,46 +20,26 @@ export default function PortfolioSite() {
       title: "National Brand Campaign",
       description: "Led creative direction and production for a multi-million dollar brand awareness campaign. Increased brand recognition by 40% and drove $2.3M in direct sales.",
       tech: ["Creative Direction", "Video Production", "Social Media", "Analytics"],
-      link: "#",
+      link: "#"
     },
     {
-      title: "Award-Winning Commercial Series",
-      description: "Produced and starred in a series of commercials that won regional advertising awards. Managed talent, coordinated shoots, and ensured brand messaging alignment.",
-      tech: ["Acting", "Production Management", "Brand Strategy", "Talent Coordination"],
-      link: "#",
+      title: "Television & Film Productions",
+      description: "Starred in multiple television series and feature films, bringing diverse characters to life while collaborating with renowned directors and production teams.",
+      tech: ["On-Camera Performance", "Character Development", "Script Analysis", "Set Collaboration"],
+      link: "#"
     },
     {
       title: "Sales Training Program",
       description: "Developed and implemented a comprehensive sales training program that increased team performance by 35% and reduced onboarding time by 50%.",
       tech: ["Sales Strategy", "Training Development", "Performance Analytics", "Team Leadership"],
-      link: "#",
-    }
-  ];
-
-  const blogPosts = [
-    {
-      title: "The Art of Authentic Brand Storytelling",
-      date: "2024-06-15",
-      excerpt: "How to create compelling narratives that resonate with audiences and drive meaningful engagement across all touchpoints.",
-      readTime: "5 min read"
-    },
-    {
-      title: "Building Trust in Sales Through Performance",
-      date: "2024-06-01",
-      excerpt: "Leveraging acting techniques and emotional intelligence to build genuine connections with clients and close more deals.",
-      readTime: "7 min read"
-    },
-    {
-      title: "From Script to Screen: Managing Creative Projects",
-      date: "2024-05-20",
-      excerpt: "Best practices for producing high-quality creative content on time and budget while maintaining artistic vision.",
-      readTime: "6 min read"
+      link: "#"
     }
   ];
 
   const skills = [
-    { category: "Creative", items: ["Brand Strategy", "Creative Direction", "Storytelling", "Video Production", "Acting"] },
+    { category: "Creative", items: ["Brand Strategy", "Creative Direction", "Storytelling", "Video Production", "Acting", "Film Production"] },
     { category: "Sales", items: ["B2B Sales", "Client Relations", "Negotiation", "Pipeline Management", "CRM"] },
+    { category: "Entertainment", items: ["On-Camera Performance", "Character Development", "Script Analysis", "Set Production", "Commercial Acting"] },
     { category: "Tools", items: ["Adobe Creative Suite", "Salesforce", "HubSpot", "Final Cut Pro", "Canva"] }
   ];
 
@@ -71,7 +51,7 @@ export default function PortfolioSite() {
           <div className="flex justify-between items-center py-4">
             <div className="font-bold text-xl text-white">Nicholas Giordano</div>
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'projects', 'blog', 'contact'].map((section) => (
+              {['home', 'about', 'projects', 'entertainment', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -95,11 +75,12 @@ export default function PortfolioSite() {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="lg:w-1/2 mb-8 lg:mb-0">
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">
-                Creative Producer & Sales Leader
+                Sales Leader & Creative Producer
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 I create compelling campaigns and drive results through strategic storytelling. 
-                Passionate about building brands, connecting with audiences, and bringing creative visions to life.
+                From starring in TV shows and films to producing award-winning campaigns, I bring 
+                authenticity and creative vision to every project.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button 
@@ -108,10 +89,7 @@ export default function PortfolioSite() {
                 >
                   View My Portfolio
                 </button>
-                <a 
-                  href="/nicholas-giordano-sales-executive.pdf" 
-                  className="border-2 border-blue-500 text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:-translate-y-0.5"
-                >
+                <a href="/nicholas-giordano-sales-executive.pdf" className="border-2 border-blue-500 text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transform hover:-translate-y-0.5" target="_blank" rel="noopener noreferrer">
                   <Download size={20} />
                   Download Resume
                 </a>
@@ -146,22 +124,26 @@ export default function PortfolioSite() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700">
               <p className="text-lg text-gray-300 mb-6">
-                With over 8 years of experience in creative production and sales, I specialize in 
+                With over 8 years of experience spanning creative production, sales, and entertainment, I specialize in 
                 developing compelling brand narratives and driving revenue growth. My unique combination 
                 of creative vision and business acumen allows me to bridge the gap between artistic 
                 excellence and commercial success.
               </p>
               <p className="text-lg text-gray-300 mb-6">
-                From starring in award-winning commercials to producing multi-million dollar campaigns, 
-                I bring authenticity and strategic thinking to every project. I believe in the power 
-                of storytelling to create meaningful connections between brands and their audiences.
+                From starring in television shows and feature films to producing award-winning commercials 
+                and multi-million dollar campaigns, I bring authenticity and strategic thinking to every project. 
+                My on-screen experience in TV shows, movies, and commercials gives me a deep understanding 
+                of storytelling that creates meaningful connections between brands and their audiences.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800">
+                <a href="https://www.instagram.com/nicholas.giordano" className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800" target="_blank" rel="noopener noreferrer">
                   <Instagram size={24} />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800">
+                <a href="https://www.linkedin.com/in/nicholas-giordano-a7096174/"  target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800">
                   <Linkedin size={24} />
+                </a>
+                <a href="https://www.imdb.com/name/nm0320351/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_nicholas%2520giordano" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800" title="IMDB Profile">
+                  <Film size={24} />
                 </a>
                 <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800">
                   <Mail size={24} />
@@ -236,30 +218,66 @@ export default function PortfolioSite() {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section id="blog" className="py-16 bg-gray-800">
+            {/* Entertainment & Acting Section */}
+      <section id="entertainment" className="py-16 bg-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">Latest Insights</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
-              <article key={index} className="bg-gray-900 rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                <div className="flex items-center gap-2 mb-4">
-                  <BookOpen size={20} className="text-purple-400" />
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
-                    <Calendar size={16} />
-                    {new Date(post.date).toLocaleDateString()}
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{post.title}</h3>
-                <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-400">{post.readTime}</span>
-                  <a href="#" className="text-purple-400 hover:text-purple-300 font-medium transition-colors">
-                    Read More →
-                  </a>
-                </div>
-              </article>
-            ))}
+          <h2 className="text-3xl font-bold text-center text-white mb-12">Entertainment & Acting</h2>
+          <div className="text-center mb-8">
+            <p className="text-lg text-gray-300 mb-6">
+              Throughout my career, I&apos;ve had the privilege of working in front of and behind the camera 
+              across television, film, and commercial productions.
+            </p>
+            <a 
+              href="https://www.imdb.com/name/nm0320351/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_nicholas%2520giordano" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <Film size={20} />
+              View IMDB Profile
+            </a>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-900 rounded-2xl p-6 shadow-xl border border-gray-700">
+              <div className="flex items-center gap-2 mb-4">
+                <Film size={20} className="text-yellow-400" />
+                <h3 className="text-xl font-semibold text-white">Television</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Featured in multiple television series, bringing characters to life with authenticity and depth.
+              </p>
+              <ul className="text-gray-400 text-sm space-y-1">
+                <li>• Series Regular & Guest Star roles</li>
+                <li>• Drama & Comedy productions</li>
+                <li>• Network & Streaming platforms</li>
+              </ul>
+            </div>
+            <div className="bg-gray-900 rounded-2xl p-6 shadow-xl border border-gray-700">
+              <div className="flex items-center gap-2 mb-4">
+                <Film size={20} className="text-yellow-400" />
+                <h3 className="text-xl font-semibold text-white">Film</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Starred in feature films across various genres, collaborating with talented directors and casts.
+              </p>
+              <ul className="text-gray-400 text-sm space-y-1">
+                <li>• Lead & Supporting roles</li>
+                <li>• Independent & Studio films</li>
+                <li>• Multiple genre experience</li>
+              </ul>
+            </div>
+            <div className="bg-gray-900 rounded-2xl p-6 shadow-xl border border-gray-700">
+              <div className="flex items-center gap-2 mb-4">
+                <Film size={20} className="text-yellow-400" />
+                <h3 className="text-xl font-semibold text-white">Commercials & Production</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Produced and starred in several commercial campaigns for major brands and agencies.
+              </p>
+              <ul className="text-gray-400 text-sm space-y-1">
+                <li>• National brand campaigns</li>
+                <li>• Producer & On-camera talent</li>
+                <li>• Award-winning creative work</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -302,20 +320,24 @@ export default function PortfolioSite() {
                 <h4 className="text-lg font-semibold text-white">Connect with me</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <a 
-                    href="https://instagram.com"
+                    href="https://instagram.com/nicholas.giordano"
                     className="flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-600 py-3 px-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
                   >
                     <Instagram size={20} className="text-gray-300" />
                     <span className="text-gray-300">Instagram</span>
                   </a>
                   <a 
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/nicholas-giordano-a7096174/" target="_blank" rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 py-3 px-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
                   >
                     <Linkedin size={20} className="text-white" />
                     <span className="text-white">LinkedIn</span>
                   </a>
                 </div>
+                <a href="https://www.imdb.com/name/nm0320351/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_nicholas%2520giordano" className="flex items-center justify-center gap-2 w-full bg-yellow-600 hover:bg-yellow-700 py-3 px-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl" target="_blank" rel="noopener noreferrer">
+                  <Film size={20} className="text-white" />
+                  <span className="text-white">View IMDB</span>
+                </a>
                 <a 
                   href="mailto:nicholas.giordano@email.com"
                   className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 py-3 px-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
@@ -342,11 +364,14 @@ export default function PortfolioSite() {
               <p className="text-gray-400">&copy; 2025 Nicholas Giordano. All rights reserved.</p>
             </div>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800">
+              <a href="https://www.instagram.com/nicholas.giordano" className="hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800" target="_blank" rel="noopener noreferrer">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800">
+              <a href="https://www.linkedin.com/in/nicholas-giordano-a7096174/" className="hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800" target="_blank" rel="noopener noreferrer">
                 <Linkedin size={20} />
+              </a>
+              <a href="https://www.imdb.com/name/nm0320351/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_nicholas%2520giordano" className="hover:text-yellow-400 transition-colors p-2 rounded-lg hover:bg-gray-800" title="IMDB Profile" target="_blank" rel="noopener noreferrer">
+                <Film size={20} />
               </a>
               <a href="#" className="hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-gray-800">
                 <Mail size={20} />
