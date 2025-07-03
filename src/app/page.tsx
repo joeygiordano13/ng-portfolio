@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Calendar, User, Briefcase, BookOpen, Instagram } from 'lucide-react';
+import { Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Calendar, Briefcase, BookOpen, Instagram } from 'lucide-react';
 
 export default function PortfolioSite() {
   const [activeSection, setActiveSection] = useState('home');
