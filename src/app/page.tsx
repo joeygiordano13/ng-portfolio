@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import { InstagramIcon, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Calendar, User, Code, Briefcase, BookOpen, Instagram } from 'lucide-react';
+import Image from 'next/image';
+import { Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Calendar, User, Briefcase, BookOpen, Instagram } from 'lucide-react';
 
 export default function PortfolioSite() {
   const [activeSection, setActiveSection] = useState('home');
@@ -19,19 +20,22 @@ export default function PortfolioSite() {
       title: "National Brand Campaign",
       description: "Led creative direction and production for a multi-million dollar brand awareness campaign. Increased brand recognition by 40% and drove $2.3M in direct sales.",
       tech: ["Creative Direction", "Video Production", "Social Media", "Analytics"],
-      link: "#"
+      link: "#",
+      github: "#"
     },
     {
       title: "Award-Winning Commercial Series",
       description: "Produced and starred in a series of commercials that won regional advertising awards. Managed talent, coordinated shoots, and ensured brand messaging alignment.",
       tech: ["Acting", "Production Management", "Brand Strategy", "Talent Coordination"],
       link: "#",
+      github: "#"
     },
     {
       title: "Sales Training Program",
       description: "Developed and implemented a comprehensive sales training program that increased team performance by 35% and reduced onboarding time by 50%.",
       tech: ["Sales Strategy", "Training Development", "Performance Analytics", "Team Leadership"],
       link: "#",
+      github: "#"
     }
   ];
 
@@ -119,9 +123,11 @@ export default function PortfolioSite() {
             <div className="lg:w-1/2 flex justify-center">
               <div className="relative">
                 <div className="w-64 h-64 rounded-full overflow-hidden shadow-2xl shadow-blue-500/30 border-4 border-black p-1 bg-black">
-                  <img 
+                  <Image 
                     src="/nicholas-giordano.jpeg" 
                     alt="Nicholas Giordano Profile" 
+                    width={256}
+                    height={256}
                     className="w-full h-full object-cover rounded-full"
                     onError={(e) => {
                       // Fallback to placeholder if image doesn't exist
@@ -273,11 +279,11 @@ export default function PortfolioSite() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">Get In Touch</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
-              <h3 className="text-xl font-semibold mb-6 text-white">Let's create something amazing</h3>
+              <h3 className="text-xl font-semibold mb-6 text-white">Let&apos;s create something amazing</h3>
               <p className="text-gray-300 mb-8">
-                I'm always excited to discuss new projects, creative collaborations, 
+                I&apos;m always excited to discuss new projects, creative collaborations, 
                 or sales opportunities. Whether you need a producer, performer, or sales leader, 
-                let's explore how we can work together.
+                let&apos;s explore how we can work together.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -305,7 +311,7 @@ export default function PortfolioSite() {
                 <h4 className="text-lg font-semibold text-white">Connect with me</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <a 
-                    href="https://github.com"
+                    href="https://instagram.com"
                     className="flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-600 py-3 px-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
                   >
                     <Instagram size={20} className="text-gray-300" />
@@ -320,7 +326,7 @@ export default function PortfolioSite() {
                   </a>
                 </div>
                 <a 
-                  href="mailto:alex.morgan@email.com"
+                  href="mailto:nicholas.giordano@email.com"
                   className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 py-3 px-4 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
                 >
                   <Mail size={20} className="text-white" />
