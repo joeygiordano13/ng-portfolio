@@ -7,7 +7,7 @@ import { Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Calendar, User, 
 export default function PortfolioSite() {
   const [activeSection, setActiveSection] = useState('home');
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
